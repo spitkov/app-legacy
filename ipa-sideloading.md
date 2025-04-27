@@ -58,18 +58,18 @@ Három lehetőséged van a Firka telepítésére:
     - **AdBlock**: Letiltja a reklámokat (néhány script is letiltásra kerülhet, ami problémákat okozhat)
     - **OTA blocker**: Letiltja az Over-The-Air (Apple szerverekről küldött) frissítéseket
 
-### 2. Tanúsítványok telepítése
+### 2. Tanúsítványok letöltése
 - Menj vissza a korábban megnyitott weboldalra
 - Nyomj a `Certificates` gombra, majd újra a `Certificates` opcióra
-- Engedélyezd a fájl letöltését
-- Töltsd le és csomagold ki a ZIP fájlt
+- Engedélyezd a fájl letöltését és töltsd le.
+
 
 ### 3. Portal telepítése
 - Menj vissza a letöltési oldalra
 - Nyomj a `Portal` gombra
-- Próbáld meg a `Portal - Continent` opciót
+- Próbáld meg az egyik `Portal - XXXXX` opciót
 - Ha "*Integritás nem ellenőrizhető*" hibát kapsz, próbáld a többi lehetőséget
-- Ha az **Avex** működik, csak az ESign-t választhatod
+- Vannak ESign only certificatek, de ez minket nem zavar mivel ESign-t akarunk telepíteni, csak késöbb lesz másab
 - Ha egyik sem működik, feketelistán lehetsz - írj a Firka Discord szerverbe segítségért, vagy olvasd el a "[Revoke Fix Guide](https://github.com/TheAppleUser1/Revoke-Fixing-Guide)"-ot.
 - Menj a beállitásokba utána Általános az alatt VPN és eszközfelügyelet ott keresd meg a Profilt amit letöltöttél menjn rá és azon belül kattints a megbizásra utána megbizás (vagy megbizás és újraindítás) 
   
@@ -77,21 +77,20 @@ Három lehetőséged van a Firka telepítésére:
 - Nyisd meg a **Portal**t
 - Menj végig a beállítási folyamaton
 - Navigálj a `Downloads` fülre
-- Ha az **Avex**et választottad a **Portal** telepítésekor, csak az **ESign** opciót választhatod (a Firka ezt ajánlja)
-- Nyomd meg az **ESign** opciót, majd telepítsd ugyanúgy, mint a **Portal**t
+- Nyomd meg az **ESign** opciót, és válasszd ki ugyanazt amilyen nevű Portal-t tölöttél le, majd telepítsd ugyanúgy, mint a **Portal**-t
 - Nyisd meg az **ESignt** és fogadd el a licencszerződést
 
-### 5. Tanúsítványok importálása
-- A fájlnézetben nyomj a három pontra a sarokban
-- Válaszd az `Import` opciót
-- Navigálj a korábban letöltött és kicsomagolt mappához
-- Nyisd meg azt a mappát, ami a Portal letöltési helyének nevét viseli
-- Válaszd ki a "*cert_neve.p12*" fájlt és importáld
-- Nyomj újra a három pontra, válaszd az `Import` opciót
-- Importáld a *.mobileprovision* fájlt is ugyanabból a mappából
-- A fájlnézetben nyomj rá a "*cert_neve.p12*" fájlra
-- Válaszd az `Import certificate management` opciót
-- Add meg a jelszót: `WSF`
+### 5. Tanúsítványok telepítése
+- Kattints alul a `File` gombra
+- Aztán a 3 pöttyre jobb felül
+- Keresd meg a letöltött `certificates.zip` file-t és importáld
+- Kattints a zip-re és utána Unzip
+- Keresd meg amilyen portál-t telepítettél
+- Ha ESign only-s certificates Portált töltöttél le akkor a `# ESign Only Certs` mappába találod
+- Az ilyeneket úgy telepíted, hogy rányomsz a `certificatname.esigncert` fájlra utána `Import Certificate Managment`
+- Ha nem ESign only portált telepítettél akkor a mappába egy .p12 és .mobileprovision fájlt fogsz látni
+- Előszőr kattints a .mobileprovision fájlra és Import (Itt egy kínai szöveg fog megjelenni xd)
+- Azután kattints a .p12 fájlra és ha kér jelszót írd be, hogy `WSF`
 
 ### 6. Firka telepítése
 - Menj az `AppStore` fülre alul aztán bal felül kattints az `App Source` gombra azután jobb felül kattints az +-ra és másold be hogy `https://raw.githubusercontent.com/spitkov/firkarepo/refs/heads/main/esign.json`
